@@ -9,6 +9,20 @@ namespace Ucu.Poo.Cars
         /// El sensor de la bomba de aceite.
         /// </summary>
         public Sensor Sensor { get; private set; } = new Sensor();
+        
+        public int CountFaultySensors()
+        {
+            if (Sensor.IsFaulty)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
+    
+    
 
 }

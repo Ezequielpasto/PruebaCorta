@@ -15,7 +15,7 @@ namespace Ucu.Poo.Cars
         /// </summary>
         public void Fail()
         {
-            this.IsFaulty = true;
+            this.IsFaulty = false;
         }
     }
 }

@@ -28,7 +28,22 @@ namespace Ucu.Poo.Cars
             for (int i = 0; i < 4; i++)
             {
                 this.fuelInjectors[i] = new FuelInjector();
-            }
+            } 
+            
+            
         }
+        public int CountFaultySensors()
+        {
+            int count;
+            count+=OilPump.CountFaultySensors();
+            for (int i = 0; i < 4; i++)
+            {
+                count += fuelInjectors[i].CountFaultySensors();
+            }
+
+            return count;
+        }
+
+        
     }
 }
